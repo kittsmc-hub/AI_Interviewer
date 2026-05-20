@@ -16,7 +16,7 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: "Missing jobTitle" });
     }
 
-    const API_KEY = process.env.GEMINI_API_KEY;
+    const API_KEY = process.env.API_KEY;
 
     const prompt = `
 Generate 3 interview questions for a ${jobTitle} role.
