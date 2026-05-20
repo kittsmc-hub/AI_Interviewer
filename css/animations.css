@@ -1,0 +1,54 @@
+/* =========================
+   animations.css
+========================= */
+
+.spinner {
+  animation: spin 0.8s linear infinite;
+}
+
+.question-card {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: cardEnter 0.55s forwards;
+}
+
+.loading,
+.error {
+  animation: fadeIn 0.3s ease;
+}
+
+button,
+input,
+.question-card {
+  transition:
+    transform 250ms cubic-bezier(0.22, 1, 0.36, 1),
+    background 250ms ease,
+    border-color 250ms ease,
+    box-shadow 250ms ease,
+    opacity 250ms ease;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes cardEnter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
