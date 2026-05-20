@@ -1,21 +1,21 @@
 import { fetchInterviewQuestions }
-from "../api/api.js";
+from "./api/gemini.js";
 
 import { parseQuestions }
-from "./utils/parseQuestions.js";
+from "../utils/parseQuestions.js";
 
 import { renderQuestions }
-from "./ui/renderQuestions.js";
+from "../ui/renderQuestions.js";
 
 import {
   showLoading,
   hideLoading
-} from "./ui/loading.js";
+} from "../ui/loading.js";
 
 import {
   showError,
   clearError
-} from "./ui/errors.js";
+} from "../ui/errors.js";
 
 
 
